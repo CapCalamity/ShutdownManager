@@ -1,0 +1,157 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{1062937C-A18B-4CBC-8BFE-5321C0DEDB03}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ShutdownTimer</RootNamespace>
+    <AssemblyName>ShutdownTimer</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Classes\CPUUsageEvent.cs" />
+    <Compile Include="Classes\DownloadSpeedEvent.cs" />
+    <Compile Include="Classes\Event.cs" />
+    <Compile Include="Classes\HDDUsageEvent.cs" />
+    <Compile Include="Classes\ProcessFinishedEvent.cs" />
+    <Compile Include="Classes\TimedEvent.cs" />
+    <Compile Include="Classes\UploadSpeedEvent.cs" />
+    <Compile Include="Controller.cs" />
+    <Compile Include="Forms\AddCPUUsageEvent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AddCPUUsageEvent.Designer.cs">
+      <DependentUpon>AddCPUUsageEvent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\AddDownloadSpeedEvent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AddDownloadSpeedEvent.Designer.cs">
+      <DependentUpon>AddDownloadSpeedEvent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\AddHDDUsageEvent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AddHDDUsageEvent.Designer.cs">
+      <DependentUpon>AddHDDUsageEvent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\AddProcessFinishedEvent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AddProcessFinishedEvent.Designer.cs">
+      <DependentUpon>AddProcessFinishedEvent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\AddTimedEvent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AddTimedEvent.Designer.cs">
+      <DependentUpon>AddTimedEvent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\AddUploadSpeedEvent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AddUploadSpeedEvent.Designer.cs">
+      <DependentUpon>AddUploadSpeedEvent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\CancelShutdown.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\CancelShutdown.Designer.cs">
+      <DependentUpon>CancelShutdown.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Main.Designer.cs">
+      <DependentUpon>Main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Forms\AddCPUUsageEvent.resx">
+      <DependentUpon>AddCPUUsageEvent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\AddDownloadSpeedEvent.resx">
+      <DependentUpon>AddDownloadSpeedEvent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\AddHDDUsageEvent.resx">
+      <DependentUpon>AddHDDUsageEvent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\AddProcessFinishedEvent.resx">
+      <DependentUpon>AddProcessFinishedEvent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\AddTimedEvent.resx">
+      <DependentUpon>AddTimedEvent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\AddUploadSpeedEvent.resx">
+      <DependentUpon>AddUploadSpeedEvent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Main.resx">
+      <DependentUpon>Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
